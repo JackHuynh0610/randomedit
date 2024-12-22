@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter for Dave</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fdfcf8;
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .button {
+            background-color: #6c757d;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-family: 'Arial', sans-serif;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #495057;
+            transform: translateY(-3px);
+        }
+        .button:active {
+            transform: translateY(1px);
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 500px;
+            max-height: 80%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            text-align: left;
+            overflow-y: auto;
+            line-height: 1.8;
+        }
+        .container h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+        .container p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .container iframe {
+            width: 100%;
+            height: 200px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: none;
+        }
+        .signature {
+            text-align: right;
+            font-style: italic;
+            margin-top: 20px;
+        }
+        body.letter-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="showLetter()">Read Letter</button>
+    <div class="overlay" id="overlay">
+        <div class="container">
+            <h1>To Dave (Dad)!!!,</h1>
+            <div class="letter-content">
+                <p>This is Jack.</p>
+                <p>Who else in the family would do something like this? Haha!</p>
+                <p>As 2024 comes to an end, I just want to take a moment to say thank you.</p>
+                <p>I know I’ve been calling you "Dave" most of the time, but I want you to know that I do see you as a dad.</p>
+                <p>Best memories I have with you is probably we go eat out at some restaurant and just having a good time.</p>
+                <p>I’m truly grateful for everything you’ve done for me. From the bottom of my heart, thank you for everything.</p>
+                <p class="signature">- Jack -</p>
+                <p>Here are some of my favorite memories. Have a look!. I make this in a day the video quality suck sorry.</p>
+                <a href="https://www.youtube.com/shorts/1BBKz3IzDag?feature=share" target="_blank">CLICK ME</a>
+            </div>
+            <button class="button" onclick="closeLetter()">Close Letter</button>
+        </div>
+    </div>
+</body>
+<script>
+    function showLetter() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+        document.body.classList.add('letter-open');
+    }
+
+    function closeLetter() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+        document.body.classList.remove('letter-open');
+    }
+</script>
+</html>

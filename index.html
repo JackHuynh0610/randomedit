@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something something idc too lazy</title>
+    <style>
+        /* Main container styling */
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Heading styling */
+        h1 {
+            font-size: 26px;
+            color: #6c757d;
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Input field styling */
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid #ced4da;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            transition: border 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 35px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-4px);
+        }
+
+        button:active {
+            transform: translateY(2px);
+        }
+
+        /* Alert message styling */
+        .alert {
+            color: #e74c3c;
+            font-size: 16px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        /* Adding a subtle hover effect to the container */
+        .container:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter a Name to see a personal letter Jack wrote for you!!</h1>
+    <input type="text" id="nameInput" placeholder="Type a name...">
+    <button onclick="redirect()">Go</button>
+    <script>
+        function redirect() {
+            const name = document.getElementById('nameInput').value.toLowerCase();
+            if (name === 'sylvia') {
+                window.location.href = 'sylvia.html';
+            } else if (name === 'dave') {
+                window.location.href = 'dave.html';
+            } else {
+                alert('No page found for the entered name.');
+            }
+        }
+    </script>
+</body>
+</html>
